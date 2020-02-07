@@ -24,6 +24,12 @@ You can also install the devtools with your project, allowing you to lock a spec
 npm install overmind-devtools
 ```
 
+If you are planning on running overmind-devtools from the command line (for example with CodeSandbox) you'll want to install it this way:
+
+```javascript
+npm install -g overmind-devtools
+```
+
 With the package [CONCURRENTLY](https://www.npmjs.com/package/concurrently) you can start the devtools as you start your build process:
 
 ```text
@@ -41,6 +47,17 @@ npm install overmind-devtools concurrently
 }
 ```
 {% endcode %}
+
+### Running on Chromebook
+To run overmind-devtools using the Crouton Linux distribution that's provided for Chromebooks you'll need to configure it this way:
+
+```javascript
+app = createOvermind(config, {
+    devtools: 'penguin.termina.linux.test:XXXX'
+  });
+```
+
+where `XXXX` is the port you'll be using.
 
 ## Hot Module Replacement
 
